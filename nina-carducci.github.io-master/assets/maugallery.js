@@ -57,6 +57,20 @@
       }
     });
 
+    //Evenement pour filtrer par catégorie en faisant click
+    $(".gallery").on("click", ".nav-link", function() {
+      if ($(this).hasClass("active-tag")) {
+        return;
+      }
+
+      //Quitter la classe "active" de la catégorie sélectionnée
+      $(".active-tag").removeClass("active");
+
+      //Ajouter la classe "active" à la catégorie sélectionnée
+      $(this).addClass("active");
+ 
+    });
+
     $(".gallery").on("click", ".nav-link", $.fn.mauGallery.methods.filterByTag);
     $(".gallery").on("click", ".mg-prev", () =>
       $.fn.mauGallery.methods.prevImage(options.lightboxId)
