@@ -22,10 +22,6 @@ header {
 	font-size: 26px;
 }
 
-.données-structurées {
-	display: none;
-}
-
 nav ul {
 	display: flex;
 	list-style-type: none;
